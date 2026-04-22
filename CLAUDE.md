@@ -1,25 +1,30 @@
-import pandas as pd
-from src.metrics import attrition_rate, attrition_by_department
+# CLAUDE.md
 
+## Project Overview
+This repository contains a small People Analytics case study for BrightPath Manufacturing.
+The goal is to analyze employee attrition using Python and improve the codebase safely.
 
-def test_attrition_rate_returns_expected_percent():
-    df = pd.DataFrame(
-        {
-            "employee_id": [1, 2, 3, 4],
-            "department": ["Sales", "Sales", "HR", "HR"],
-            "attrition": ["Yes", "No", "No", "Yes"],
-        }
-    )
-    assert attrition_rate(df) == 50.0
+## What Good Work Looks Like
+- Keep solutions simple and beginner-friendly
+- Prefer readable pandas code over clever code
+- Explain business meaning, not just code changes
+- Preserve the column names in the raw CSV unless the task requires otherwise
 
+## When Editing Code
+- Change only what is needed for the task
+- Avoid broad refactors unless asked
+- Before major edits, briefly state the plan
+- After edits, recommend how to verify the result
 
-def test_attrition_by_department_returns_expected_columns():
-    df = pd.DataFrame(
-        {
-            "employee_id": [1, 2, 3, 4],
-            "department": ["Sales", "Sales", "HR", "HR"],
-            "attrition": ["Yes", "No", "No", "Yes"],
-        }
-    )
-    result = attrition_by_department(df)
-    assert list(result.columns) == ["department", "employees", "leavers", "attrition_rate"]
+## Analysis Expectations
+Focus on patterns tied to:
+- department
+- overtime
+- travel frequency
+- job satisfaction
+- monthly income
+
+## Testing
+Run:
+- `pytest`
+- `python src/analyze_attrition.py`

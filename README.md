@@ -1,30 +1,22 @@
-# CLAUDE.md
+# Attrition Analysis
 
-## Project Overview
-This repository contains a small People Analytics case study for BrightPath Manufacturing.
-The goal is to analyze employee attrition using Python and improve the codebase safely.
+BrightPath Manufacturing has been experiencing rising employee attrition.  The People Analytics team has been asked to review employee data and identify attrition patterns.
 
-## What Good Work Looks Like
-- Keep solutions simple and beginner-friendly
-- Prefer readable pandas code over clever code
-- Explain business meaning, not just code changes
-- Preserve the column names in the raw CSV unless the task requires otherwise
+## Business Objective
+Use Python to analyze employee attrition and recommend actions for HR leaders.
 
-## When Editing Code
-- Change only what is needed for the task
-- Avoid broad refactors unless asked
-- Before major edits, briefly state the plan
-- After edits, recommend how to verify the result
+## Repository Goals
+- Clean and explore employee data
+- Calculate attrition patterns by department, overtime, travel, and job satisfaction
+- Improve code quality and reliability
+- Add or improve tests
+- Strengthen project documentation
 
-## Analysis Expectations
-Focus on patterns tied to:
-- department
-- overtime
-- travel frequency
-- job satisfaction
-- monthly income
+## Files
+- `data/employees.csv` - employee dataset
+- `src/load_data.py` - data loading and cleaning helpers
+- `src/metrics.py` - analysis functions
+- `src/analyze_attrition.py` - main script
+- `tests/` - starter tests
+- `CLAUDE.md` - project guidance for Claude Code
 
-## Testing
-Run:
-- `pytest`
-- `python src/analyze_attrition.py`
